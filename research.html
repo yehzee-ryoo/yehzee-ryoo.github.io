@@ -17,35 +17,33 @@
     <![endif]-->
   <style>
     details.paper {
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 10px 14px;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
     details.paper summary {
-      cursor: pointer;
-      font-weight: normal;
       list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
+      cursor: default;
     }
     details.paper summary::-webkit-details-marker { display: none; }
-    details.paper summary::after {
-      content: '▸ Abstract';
-      font-size: 12px;
-      color: #0070c0;
-      white-space: nowrap;
-      margin-left: 12px;
-      flex-shrink: 0;
+    .paper-title {
+      display: block;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 4px;
     }
-    details.paper[open] summary::after {
-      content: '▾ Abstract';
+    .paper-authors {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .abstract-toggle {
+      display: inline-block;
+      font-size: 13px;
+      color: #0070c0;
+      cursor: pointer;
+      user-select: none;
     }
     details.paper .abstract {
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid #eee;
+      margin-top: 8px;
       font-size: 14px;
       color: #444;
       line-height: 1.6;
@@ -105,25 +103,41 @@
   Cha, Sujin, <b>Yehzee Ryoo</b>, and Sung Eun Kim. (2023). <i>Asian Survey</i>, 63(1), 1-30.
 </p>
 
-<h2 style="margin-bottom: 8px;">Working Papers</h2>
+<h2 style="margin-bottom: 12px;">Working Papers</h2>
 
 <details class="paper">
-  <summary>Meta-analysis of Effects of Regime Type Across IR Experiments (with Jonathan Renshon, Joshua Kertzer, and Alex Coppock)</summary>
+  <summary>
+    <span class="paper-title">Meta-analysis of Effects of Regime Type Across IR Experiments</span>
+    <span class="paper-authors">Yehzee Ryoo, Jonathan Renshon, Joshua Kertzer, and Alex Coppock</span>
+    <span class="abstract-toggle">Abstract</span>
+  </summary>
   <div class="abstract">Abstract coming soon.</div>
 </details>
 
 <details class="paper">
-  <summary>Network-Mediated Causal Analysis: Trade and Human Rights Votes (with Adeline Lo, Keith Levin)</summary>
+  <summary>
+    <span class="paper-title">Network-Mediated Causal Analysis: Trade and Human Rights Votes</span>
+    <span class="paper-authors">Yehzee Ryoo, Adeline Lo, Keith Levin</span>
+    <span class="abstract-toggle">Abstract</span>
+  </summary>
   <div class="abstract">How and why do democracies vary in their support for human rights resolutions on the international stage? Although democracy is often seen as the primary determinant of foreign-policy decisions on normative issues like human rights protection, empirical evidence is mixed: autocratic states such as China often show greater support for human rights resolutions than the United States in the United Nations General Assembly. We investigate this puzzle by applying a network mediation model that conceptualizes trade networks as mediators explicitly, hypothesizing that complex trade interdependence between states channel the effect of regime type on human rights voting decisions. The model estimates each state's latent position in the trade network using singular value decomposition and quantifies the indirect effect of regime type on voting behavior through economic ties. Our analysis reveals that the indirect impacts of regime type via trade interdependence is substantial and different from that of direct impacts. These findings challenge prevailing assumptions about normative alignment among democracies and highlight the constraining influence of trade networks on values-based foreign policy. Our work identifies previously neglected indirect effects of economic networks among states, strengthening the connection between theoretical expectations and empirical analysis through social network approaches.</div>
 </details>
 
 <details class="paper">
-  <summary>Social Media Posts and Russo-Ukrainian War (with Jisoo Kim, Zening Duan, Junda Li, Jon Pevehouse, and Dhavan Shah)</summary>
+  <summary>
+    <span class="paper-title">Social Media Posts and Russo-Ukrainian War</span>
+    <span class="paper-authors">Yehzee Ryoo, Jisoo Kim, Zening Duan, Junda Li, Jon Pevehouse, and Dhavan Shah</span>
+    <span class="abstract-toggle">Abstract</span>
+  </summary>
   <div class="abstract">Abstract coming soon.</div>
 </details>
 
 <details class="paper">
-  <summary>Foreign Civilian Casualties and Support for War</summary>
+  <summary>
+    <span class="paper-title">Foreign Civilian Casualties and Support for War</span>
+    <span class="paper-authors">Yehzee Ryoo</span>
+    <span class="abstract-toggle">Abstract</span>
+  </summary>
   <div class="abstract">Abstract coming soon.</div>
 </details>
 
@@ -133,5 +147,19 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script>
+      document.querySelectorAll('details.paper').forEach(function(details) {
+        var summary = details.querySelector('summary');
+        var toggle = summary.querySelector('.abstract-toggle');
+        summary.addEventListener('click', function(e) {
+          e.preventDefault();
+        });
+        toggle.addEventListener('click', function() {
+          details.open = !details.open;
+          toggle.textContent = details.open ? 'Abstract ▾' : 'Abstract ▸';
+        });
+        toggle.textContent = 'Abstract ▸';
+      });
+    </script>
   </body>
 </html>
