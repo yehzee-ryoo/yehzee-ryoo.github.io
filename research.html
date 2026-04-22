@@ -16,6 +16,40 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   <style>
+    details.paper {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+    }
+    details.paper summary {
+      cursor: pointer;
+      font-weight: normal;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    details.paper summary::-webkit-details-marker { display: none; }
+    details.paper summary::after {
+      content: '▸ Abstract';
+      font-size: 12px;
+      color: #0070c0;
+      white-space: nowrap;
+      margin-left: 12px;
+      flex-shrink: 0;
+    }
+    details.paper[open] summary::after {
+      content: '▾ Abstract';
+    }
+    details.paper .abstract {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+    }
     nav.top-nav {
       background: #fff;
       border-bottom: 1px solid #ddd;
@@ -72,10 +106,26 @@
 </p>
 
 <h2 style="margin-bottom: 8px;">Working Papers</h2>
-<p style="margin-bottom: 4px; line-height: 1.2;">Meta-analysis of Effects of Regime Type Across IR Experiments (with Jonathan Renshon, Joshua Kertzer, and Alex Coppock)</p>
-<p style="margin-bottom: 4px; line-height: 1.2;">Network-Mediated Causal Analysis: Trade and Human Rights Votes (with Adeline Lo, Keith Levin)</p>
-<p style="margin-bottom: 4px; line-height: 1.2;">Social Media Posts and Russo-Ukrainian War (with Jisoo Kim, Zening Duan, Junda Li, Jon Pevehouse, and Dhavan Shah)</p>
-<p style="margin-bottom: 4px;">Foreign Civilian Casualties and Support for War</p>
+
+<details class="paper">
+  <summary>Meta-analysis of Effects of Regime Type Across IR Experiments (with Jonathan Renshon, Joshua Kertzer, and Alex Coppock)</summary>
+  <div class="abstract">Abstract coming soon.</div>
+</details>
+
+<details class="paper">
+  <summary>Network-Mediated Causal Analysis: Trade and Human Rights Votes (with Adeline Lo, Keith Levin)</summary>
+  <div class="abstract">How and why do democracies vary in their support for human rights resolutions on the international stage? Although democracy is often seen as the primary determinant of foreign-policy decisions on normative issues like human rights protection, empirical evidence is mixed: autocratic states such as China often show greater support for human rights resolutions than the United States in the United Nations General Assembly. We investigate this puzzle by applying a network mediation model that conceptualizes trade networks as mediators explicitly, hypothesizing that complex trade interdependence between states channel the effect of regime type on human rights voting decisions. The model estimates each state's latent position in the trade network using singular value decomposition and quantifies the indirect effect of regime type on voting behavior through economic ties. Our analysis reveals that the indirect impacts of regime type via trade interdependence is substantial and different from that of direct impacts. These findings challenge prevailing assumptions about normative alignment among democracies and highlight the constraining influence of trade networks on values-based foreign policy. Our work identifies previously neglected indirect effects of economic networks among states, strengthening the connection between theoretical expectations and empirical analysis through social network approaches.</div>
+</details>
+
+<details class="paper">
+  <summary>Social Media Posts and Russo-Ukrainian War (with Jisoo Kim, Zening Duan, Junda Li, Jon Pevehouse, and Dhavan Shah)</summary>
+  <div class="abstract">Abstract coming soon.</div>
+</details>
+
+<details class="paper">
+  <summary>Foreign Civilian Casualties and Support for War</summary>
+  <div class="abstract">Abstract coming soon.</div>
+</details>
 
       </section>
       <footer>
