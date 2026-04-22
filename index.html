@@ -19,14 +19,28 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   <style>
-    nav.top-nav {
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
       background: #fff;
       border-bottom: 1px solid #ddd;
-      padding: 10px 20px;
+    }
+    .site-header .site-name {
+      text-align: center;
+      padding: 10px 20px 4px;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    nav.top-nav {
       display: flex;
       justify-content: flex-end;
       gap: 24px;
       font-size: 15px;
+      padding: 6px 20px 8px;
     }
     nav.top-nav a {
       color: #333;
@@ -37,14 +51,24 @@
       color: #0070c0;
       text-decoration: underline;
     }
+    nav.top-nav a.active {
+      color: #0070c0;
+      border-bottom: 2px solid #0070c0;
+    }
+    body {
+      padding-top: 72px;
+    }
   </style>
   </head>
   <body>
-    <nav class="top-nav">
-      <a href="index.html" class="active">About</a>
-      <a href="research.html">Research</a>
-      <a href="cv/Yehzee_Ryoo_CV.pdf" target="_blank">CV</a>
-    </nav>
+    <div class="site-header">
+      <div class="site-name">Yehzee Ryoo</div>
+      <nav class="top-nav">
+        <a href="index.html" class="active">About</a>
+        <a href="research.html">Research</a>
+        <a href="cv/Yehzee_Ryoo_CV.pdf" target="_blank">CV</a>
+      </nav>
+    </div>
     <div class="wrapper">
       <header>
         <h1>Yehzee Ryoo</h1>
