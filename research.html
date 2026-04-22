@@ -56,20 +56,21 @@
       z-index: 100;
       background: #fff;
       border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 28px;
     }
     .site-header .site-name {
-      text-align: center;
-      padding: 10px 20px 4px;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
       letter-spacing: 0.02em;
+      color: #222;
     }
     nav.top-nav {
       display: flex;
-      justify-content: flex-end;
-      gap: 24px;
-      font-size: 15px;
-      padding: 6px 20px 8px;
+      gap: 28px;
+      font-size: 18px;
     }
     nav.top-nav a {
       color: #333;
@@ -85,7 +86,7 @@
       border-bottom: 2px solid #0070c0;
     }
     body {
-      padding-top: 72px;
+      padding-top: 64px;
     }
     .wrapper section {
       float: none;
@@ -98,7 +99,7 @@
   </head>
   <body>
     <div class="site-header">
-      <div class="site-name">Yehzee Ryoo</div>
+      <span class="site-name">Yehzee Ryoo</span>
       <nav class="top-nav">
         <a href="index.html">About</a>
         <a href="research.html" class="active">Research</a>
