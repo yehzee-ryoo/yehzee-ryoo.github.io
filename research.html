@@ -114,11 +114,13 @@
         <br>
 
 <h2 style="margin-bottom: 8px;">Publication</h2>
-<p>
-  <a href="https://doi.org/10.1525/as.2022.1722144">
-    "Losing Hearts and Minds? Unpacking the Effects of Chinese Soft Power Initiatives in Africa"</a>
-  Cha, Sujin, <b>Yehzee Ryoo</b>, and Sung Eun Kim. (2023). <i>Asian Survey</i>, 63(1), 1-30.
-</p>
+<details class="paper">
+  <summary>
+    <span class="paper-title"><a href="https://doi.org/10.1525/as.2022.1722144" target="_blank">Losing Hearts and Minds? Unpacking the Effects of Chinese Soft Power Initiatives in Africa</a></span>
+    <span class="paper-authors">Sujin Cha, <b>Yehzee Ryoo</b>, and Sung Eun Kim</span>
+    <span style="display:block; font-size:13px; color:#666; margin-bottom:4px;"><i>Asian Survey</i>, 63(1), 1&ndash;30 (2023)</span>
+  </summary>
+</details>
 
 <h2 style="margin-bottom: 12px; margin-top: 50px;">Working Papers</h2>
 
@@ -171,6 +173,7 @@
       document.querySelectorAll('details.paper').forEach(function(details) {
         var summary = details.querySelector('summary');
         var toggle = summary.querySelector('.abstract-toggle');
+        if (!toggle) return;
         summary.addEventListener('click', function(e) {
           if (e.target.closest('a')) return;
           e.preventDefault();

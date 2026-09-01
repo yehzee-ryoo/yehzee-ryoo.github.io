@@ -63,6 +63,52 @@
       max-width: 760px;
       padding: 20px 30px;
     }
+    .course-list {
+      list-style: none;
+      margin: 0 0 28px 0;
+      padding: 0;
+      border-top: 1px solid #eee;
+    }
+    .course-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .course-name {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 4px;
+    }
+    .course-meta {
+      font-size: 13px;
+      color: #666;
+    }
+    .level {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+      vertical-align: 2px;
+    }
+    .level.grad {
+      background: #e8f1fa;
+      color: #0070c0;
+    }
+    .level.undergrad {
+      background: #eef6ec;
+      color: #3f7d33;
+    }
+    .institution {
+      font-size: 17px;
+      font-weight: 700;
+      color: #222;
+      margin: 28px 0 8px 0;
+    }
   </style>
   </head>
   <body>
@@ -82,18 +128,33 @@
         <br>
 
 <h2 style="margin-bottom: 8px;">Teaching</h2>
-<p style="margin-bottom: 2px; font-weight: bold;">University of Wisconsin-Madison</p>
-<ul style="margin-top: 0;">
-  <li>PS 140: Introduction to International Relations (Instructor: Mark Copelovitch) - Spring 2026 </li>
-  <li>Intro to Math for Political Science (Math Camp) - Summer 2024 &amp; 2025</li>
-  <li>PS 812: Introduction to Statistical Methods (Instructor: Adeine Lo) -  Fall 2022 &amp; 2023 </li>
-  <li>PS 813: Multi-variable Statistical Inference for Political Research (Instructor: Adeine Lo) - Spring 2023</li>
+
+<p class="institution">University of Wisconsin-Madison</p>
+<ul class="course-list">
+  <li>
+    <span class="course-name">PS 140: Introduction to International Relations<span class="level undergrad">Undergraduate</span></span>
+    <span class="course-meta">Instructor: Mark Copelovitch &middot; Spring 2026</span>
+  </li>
+  <li>
+    <span class="course-name">Intro to Math for Political Science (Math Camp)<span class="level grad">Graduate</span></span>
+    <span class="course-meta">Summer 2024, 2025 &amp; 2026</span>
+  </li>
+  <li>
+    <span class="course-name">PS 812: Introduction to Statistical Methods<span class="level grad">Graduate</span></span>
+    <span class="course-meta">Instructor: Adeline Lo &middot; Fall 2022 &amp; 2023</span>
+  </li>
+  <li>
+    <span class="course-name">PS 813: Multi-variable Statistical Inference for Political Research<span class="level grad">Graduate</span></span>
+    <span class="course-meta">Instructor: Adeline Lo &middot; Spring 2023</span>
+  </li>
 </ul>
 
-<p style="margin-bottom: 2px; font-weight: bold;">Inter-university Consortium for Political and Social Research (ICPSR)</p>
-<ul style="margin-top: 0;">
-  <li>Data Science and Text Analysis (Instructor: Kelsey
-Shoub, Caleb Pomeroy) - Summer 2023</li>
+<p class="institution">Inter-university Consortium for Political and Social Research (ICPSR)</p>
+<ul class="course-list">
+  <li>
+    <span class="course-name">Data Science and Text Analysis<span class="level grad">Graduate</span></span>
+    <span class="course-meta">Instructors: Kelsey Shoub, Caleb Pomeroy &middot; Summer 2023</span>
+  </li>
 </ul>
 
       </section>
