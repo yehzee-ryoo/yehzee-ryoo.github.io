@@ -172,6 +172,7 @@
         var summary = details.querySelector('summary');
         var toggle = summary.querySelector('.abstract-toggle');
         summary.addEventListener('click', function(e) {
+          if (e.target.closest('a')) return;
           e.preventDefault();
         });
         toggle.addEventListener('click', function() {
