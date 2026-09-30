@@ -1,0 +1,628 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage{etoolbox}
+
+\newtoggle{progress}
+\newtoggle{under_review}
+\newtoggle{review_journal}
+\newtoggle{submit_journal}
+\newtoggle{working_paper}
+\newtoggle{data_analysis}
+\newtoggle{references}
+\newtoggle{teaching}
+\newtoggle{teaching_assistance}
+
+% potential lists
+%\newtoggle{highlights}
+\newtoggle{amount}
+%\newtoggle{detail}
+%\newtoggle{grants}
+%\newtoggle{honors}
+%\newtoggle{media}
+%\newtoggle{phdcommittee}
+
+%\newtoggle{seminars}
+%\newtoggle{service}
+
+%\newtoggle{univservice}
+
+
+% TOGGLE TRUE 
+\toggletrue{progress}
+\toggletrue{under_review}
+\toggletrue{working_paper}
+%\toggletrue{data_analysis}
+\toggletrue{review_journal}
+%\toggletrue{references}
+\toggletrue{teaching}
+\toggletrue{teaching_assistance}
+
+% TOGGLE FALSE
+\togglefalse{submit_journal}
+\togglefalse{amount}
+
+\usepackage{multicol}
+\usepackage{marvosym} % For cool symbols.
+
+% DOCUMENT LAYOUT
+\usepackage{geometry}
+\geometry{
+  letterpaper, 
+  textwidth=6.5in, 
+  top=1.0in, 
+  bottom=0.9in,    % Increased from 0.6in to give more footer space
+  footskip=0.4in,   % Controls spacing between main text and footer
+  marginparsep=0pt, 
+  marginparwidth=.2in
+}
+\setlength\parindent{0in}
+
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+%\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+
+
+\usepackage[utf8x]{inputenc}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+  \renewcommand{\footrulewidth}{0pt}
+\fancyhf{}
+\lhead{ \fancyplain{}{\footnotesize Last Updated: \monthyeardate\today} }
+\rfoot{ \fancyplain{}{\thepage} }
+%\lfoot{ \fancyplain{}{{\scriptsize Last Updated : \mydate October 2020}}}
+
+% FONTS
+
+%\renewcommand{\rmdefault}{LinuxLibertineT-OsF}
+\renewcommand{\rmdefault}{Minion Pro}
+\usepackage[bitstream-charter]{mathdesign}
+
+\newenvironment{hangingpar}[1]
+  {\setlength{\leftskip}{#1}%%
+   \setlength{\parindent}{#1}%%
+  }
+  {\par}
+
+
+\newcommand{\years}[1]{\hangindent=1.45cm #1 \hskip 1em}
+%\newcommand{\journal}[1]{\textbf{\textit{#1}}}
+\newcommand{\journal}[1]{\textit{#1}}
+
+
+%\newcommand{\conference}[1]{$^{\scriptsize{\textbf{#1}}}$}
+\newcommand{\conference}[1]{$\bullet${ #1}}
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\rmfamily\mdseries\upshape\large}
+\subsectionfont{\rmfamily\bfseries\upshape\normalsize}
+\subsubsectionfont{\rmfamily\mdseries\upshape\normalsize}
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\large\mdseries}{\thesection}{1em}{}[{\titlerule[0.4pt]}]
+\usepackage{hyperref}
+
+%\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage{setspace}
+
+%\usepackage[a4paper,left=20mm,right=20mm,top=20mm,bottom=20mm]{geometry} % 
+
+\begin{document} %Document
+
+\setlength{\parskip}{0.1em} 
+
+\begin{center}
+
+{\LARGE \textbf{\textsc{Yehzee Ryoo}}} \\
+\raggedleft\footnotesize{yehzee.ryoo@wisc.edu \\\href{https://yehzee-ryoo.github.io/}{https://yehzee-ryoo.github.io/}\\ +1 608 733 9740} \\ %+82 10 8652 0745
+% 
+\end{center}
+
+\vspace{-10mm}
+
+\setlength{\parskip}{-.1em} 
+\section*{\textsc{Fields of interest}}
+\vspace{-1mm}
+Public Opinion, International Security, Political Psychology, Political Methodology
+
+\vspace{-4mm}
+\section*{\textsc{Education}}
+\vspace{-1mm}
+\textbf{University of Wisconsin-Madison}\\
+2027 \hspace{.5cm} (expected) Ph.D., Political Science \\
+2024 \hspace{.5cm} M.S., Statistics  \\ 
+2023 \hspace{.5cm} M.A., Political Science
+
+\vspace{.5mm}
+\textbf{Korea University}\\
+2021 \hspace{.5cm} M.A., Political Science and International Relations
+
+2019 \hspace{.5cm} B.A., Political Science and International Relations, Psychology (Double Major)
+
+\hspace{1.5cm} Eberhard Karls University of Tuebingen, Germany, Exchange Student\\
+%\hangindent=5.2em\hskip 5.2em Exchange student, 15 credits \\
+
+
+\vspace{-.8cm}
+\section*{\textsc{Peer-Reviewed Publication}}
+
+\vspace{-1mm}
+``Losing Hearts and Minds? Unpacking the Effects of Chinese Soft Power Initiatives in Africa.''
+
+Cha, Sujin, \textbf{Yehzee Ryoo}, and Sung Eun Kim. (2023).  \textit{Asian Survey}, 63(1), 1-30.
+\vspace{.6em}
+%\begin{itemize}
+%\setlength\itemsep{0em}
+%\item This paper examines the effects of Chinese aid projects and Confucius Institutes on the public perception in Africa. By utilizing geo-coded location data, we find that Chinese aid projects can have negative effects on public perception of China.
+%\item \textit{Presented at the 2021 Annual Convention of the International Studies Association}
+%\end{itemize}
+
+
+
+%\textbf{Disparity in House Prices and Subjective Perception of Inequality: How Individuals Shape Their perceptions of Social Conflict} (with Woo Chang Kang) \hfill \textit{Ongoing} \\
+%\vspace{-7mm}
+%\begin{itemize}
+%\setlength\itemsep{0em}
+%\item This paper examines how the objective Gini coefficients measured by house prices correlate with inhabitants' subjective perception of social conflict. 
+%\end{itemize}
+
+\vspace{-5mm}
+\section*{\textsc{Working papers}}
+
+
+\vspace{0mm}
+``The Second Image Re-Analyzed: Effects of Democracy Treatments on Beliefs about Conflict and Cooperation.''
+\textbf{Yehzee Ryoo}, Jonathan Renshon, Joshua Kertzer, and Alex Coppock
+
+
+\vspace{1mm}
+``The Hidden Power of Trade: Trade Networks as Mediators for Democracy on Human Rights Voting.'' \textbf{Yehzee Ryoo}, Adeline Lo, Keith Levin (Revise \& Resubmit at \textit{Network Science})
+%\vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+%     \item This paper introduces a new statistical method for causal mediation when the mediator is a latent positional factor, using a network graph to estimate it. Applying this method, we illustrate the relationship between political regimes and states' UNGA voting on human rights resolutions, distinguishing the direct effect of regime type from the indirect effect via trade network.
+% \end{itemize}
+
+
+\vspace{-3mm}
+\section*{\textsc{Work in Progress}}
+
+``Foreign Civilian Casualties and Support for War.''
+\textbf{Yehzee Ryoo}
+
+
+\vspace{1mm}
+``Nuclear Threats and Democratic Reaction: Public Opinion in the Russo-Ukrainian War.'' \textbf{Yehzee Ryoo}, Jisoo Kim, Zening Duan, Junda Li, Jon Pevehouse, and Dhavan Shah %\textit{(under review at Political Communication)}
+
+
+
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+% \item This paper explores how social media dynamics shape responses to Russian nuclear threats across platforms and languages. By analyzing the extensive posted content on Twitter (X), Reddit, and Youtube between November 2021 and November 2022, we trace the communication flows regarding the nuclear coercion threat by the Kremlin, across narratives, platforms, and languages. 
+% \end{itemize}
+
+\vspace{1mm}
+``Mass Preferences over Industrial Policy.''
+Sujin Cha, \textbf{Yehzee Ryoo}
+
+\vspace{1mm}
+``Nondemocratic Explanations for Democratic Peace Theory: Potential Violations of Emotional Equivalence Across Experimental Treatments.''
+\textbf{Yehzee Ryoo}, Xunchao Zhang
+
+
+%\textbf{Public Reaction to International Treaty Violations: When does the public support reciprocal noncompliance?} \textit{Yehzee Ryoo}%\textit{Presented at 2024 MPSA Annual Conference}
+%\vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+%     \item This paper shows how democratic citizens react differently to another country's violation of international agreements depending on the violator's regime type, with an original data of survey experiments. 
+%     %\item\textit{Presented at the 2022 Annual Meeting of the American Political Science Association}
+% \end{itemize}
+
+%\textbf{Tolerate or Condemn: Foreign Electoral Intervention and Democratic Public Opinion} \textit{Yehzee Ryoo}
+%\textit{Presented at 2022 MPSA Annual Conference}
+%\textit{(under review at International Interactions)} %When Do Democratic Citizens Tolerate or Condemn their Own Country’s Foreign Electoral Intervention?
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+% \item This paper demonstrates that the public are less likely to disapprove of an electoral intervention when their own country is meddling in other countries. I find that democratic citizens show strong antipathy only when using money for an intervention from my original survey experiment.
+% %\item\textit{Presented at the 2020 Annual Meeting of Korean Political Science Association}
+% %\item\textit{Presented at the Annual Meeting of the 2022 Midwest Political Science Association}
+% \end{itemize}
+
+% \textbf{Twitter and Public Opinion about Russo-Ukrainian War across Countries} (with Jon Pevehouse and Junda Li)
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+%     \item This paper examines how different users influence public opinion regarding the support and condemnation of the 2022 Russian invasion of Ukraine. Using network analysis and text analysis of Twitter posts, we address why some countries' users show more or less support for the humanitarian intervention in the war. 
+% \end{itemize}
+
+\vspace{-4mm}
+\section*{\textsc{Fellowships and Awards}} 
+
+\vspace{-1.5mm}
+\textbf{APSA Travel Grant} \hfill Fall 2025
+
+American Political Science Association
+
+\vspace{1mm}
+\textbf{Student Research Grants Competition -- Conference Presentation Funds} \hfill Spring 2025
+
+University of Wisconsin-Madison 
+
+\vspace{1mm}
+\textbf{Political Methodology Conference Travel Awards} \hfill Summer 2024
+
+Society for Political Methodology 
+
+\vspace{1mm}
+\textbf{Adam Smith Fellowship \& Frédéric Bastiat Fellowship} \hfill 2024 -- 2025, 2025 -- 2026
+
+Mercatus Center
+
+
+\textbf{Summer Research Initiative Award} \hfill Summer 2022 -- 2026
+
+University of Wisconsin-Madison, Political Science Department 
+
+
+\vspace{1mm}
+\textbf{EPW Pilot Grant Competition} \hfill May 2023 -- 2026
+
+University of Wisconsin-Madison, Experimental Political Workshop 
+
+\vspace{1mm}
+\textbf{IQMR Department Nomination} The Institute for Qualitative and Multi-Method Research \hfill Jun 2023
+
+University of Wisconsin-Madison, Political Science Department
+
+\vspace{1mm}
+\textbf{Election Research Center Conference Travel Funding} \hfill Feb 2023
+
+University of Wisconsin-Madison
+
+\vspace{1mm}
+\textbf{University Fellowships} \hfill Fall 2021 -- Spring 2022, Fall 2026 -- Spring 2027
+
+University of Wisconsin-Madison, Political Science Department
+
+
+\vspace{-3mm}
+\section*{\textsc{Conference Presentations}}
+
+\vspace{-2mm}
+\textbf{APSA Annual Conference} \hfill September 3--5, 2026\\
+American Political Science Association, Boston, MA, USA
+\begin{itemize}
+\vspace{-1.5mm}
+    \item ``When Foreign Civilian Deaths Become Wrong: Intentionality, Vulnerability, and Support for War''
+\end{itemize}
+
+
+\vspace{-2mm}
+\textbf{PolMeth Annual Meeting} \hfill July 16--18, 2026\\
+Society for Political Methodology, East Lansing, MI, USA
+\begin{itemize}
+\vspace{-2mm}
+    \item ``Foreign Civilian Casualties and Support for War: Intentionality, Vulnerability, and Moral Judgment''
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{ISA Annual Convention} \hfill March 22--25, 2026\\
+International Studies Association, Columbus, OH, USA
+\begin{itemize}
+\vspace{-2mm}
+    \item ``Public Opinion and Foreign Civilian Deaths: Intentionality, Vulnerability, and Morality''
+\end{itemize}
+
+\vspace{-1.5mm}
+\textbf{APSA Annual Conference} \hfill September 11--14, 2025\\
+American Political Science Association, Vancouver, Canada
+\begin{itemize}
+\vspace{-2mm}
+    \item ``Do Foreign Civilian Casualties Erode Public Support for War?''
+\end{itemize}
+
+\vspace{-1.5mm}
+\textbf{MPSA Annual Conference} \hfill April 3--6, 2025\\
+Midwest Political Science Association, Chicago, IL, USA
+\begin{itemize}
+\vspace{-2mm}
+    \item ``Nondemocratic Explanation for Democratic Peace Theory: Emotional Inequivalence Across Experimental Treatments''
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{PolMeth Annual Meeting} \hfill July 18--20, 2024\\
+Society for Political Methodology, Riverside, CA, USA
+\begin{itemize}
+\vspace{-2mm}
+    \item ``Incorporating the Missing Links: Using Network-Mediated Causal Analysis to Explain the Negative Correlation Between Democracy and Human Rights Voting''
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{MPSA Annual Conference} \hfill April 4--7, 2024\\
+Midwest Political Science Association, Chicago, IL, USA
+\begin{itemize}
+\vspace{-2mm}
+    \item ``Public Reaction to International Treaty Violations: When Does the Public Support Retaliatory Noncompliance?''
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{APSA Annual Conference} \hfill September 15--18, 2022\\
+American Political Science Association, Montreal, Canada
+\begin{itemize}
+\vspace{-2mm}
+    \item ``A Democratic Public’s Perspective on International Agreement Violations''
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{ISA Annual Convention} \hfill April 6--9, 2021\\
+International Studies Association (Virtual)
+\vspace{-2mm}
+\begin{itemize}
+    \item ``Losing Hearts and Minds? Unpacking the Effects of Chinese Aid on Soft Power''
+\end{itemize}
+
+
+
+% \vspace{-5mm}
+% \section*{\textsc{Research Experience}}
+% \textbf{Project Assistant for Prof. Adeline Lo,} University of Wisconsin-Madison \hfill July - Aug, 2024
+
+% \textbf{Project Assistant for Prof. Jonathan Renshon,} University of Wisconsin-Madison \hfill Jan - May, 2024
+
+% \textbf{Research Assistant for Prof. Sung Eun Kim,} Korea University \hfill Jul - Dec, 2020
+% \vspace{-1.5mm}
+%\begin{itemize}
+%\setlength\itemsep{-.3em}
+% \item Assisted the collaborative research project on foreign  aid and soft power, funded by the National Research Council for Economics, Humanities, and Social Sciences under the Prime Minster's Office
+% \item Assisted with designing, implementing and analyzing conjoint experiments and survey experiments on public attitudes toward foreign aid and soft power strategies in 16 countries 
+%\end{itemize}
+
+\vspace{-6mm}
+\section*{\textsc{Teaching \& Mentoring Experience}}
+
+\vspace{-1mm}
+\textbf{Undergraduate Research Mentor} University of Wisconsin--Madison
+\hfill Spring 2026
+\vspace{-2mm}
+\begin{itemize}
+    \item ``Undergraduate Research Program'': Hands-on mentoring in graduate-level academic research and support in developing students’ own research interests
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Teaching Assistant} for Prof. Mark Copelovitch, University of Wisconsin--Madison
+\hfill Spring 2026\\
+\vspace{-7mm}
+\begin{itemize}
+    \item ``Introduction to International Relations (PS 140)'' \textit{(undergraduate)}
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{Summer Math Camp}, University of Wisconsin-Madison
+\hfill Summer 2024, 2025, 2026\\
+\vspace{-7mm}
+\begin{itemize}
+    \item Math, Statistics, and Statistical Software (R/RStudio) \textit{(graduate)}
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{Teaching Assistant}, Inter-university Consortium for Political and Social Research (ICPSR)\\
+Institute for Social Research (ISR), University of Michigan \hfill Summer 2023
+\vspace{-2mm}
+\begin{itemize}
+    \item ``Data Science and Text Analysis'' \textit{(graduate)}
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{Teaching Assistant} for Prof. Adeline Lo, University of Wisconsin--Madison \hfill Fall 2022 -- Fall 2023\\
+\vspace{-6mm}
+\begin{itemize}
+    \item ``Introduction to Statistical Methods (PS 812)'' \textit{(graduate)}
+    \vspace{-3mm}
+    \item ``Multi-variable Statistical Inference for Political Research (PS 813)'' \textit{(graduate)}
+\end{itemize}
+
+\vspace{-1mm}
+\textbf{R Teaching Workshop}, Korea University, Seoul, Republic of Korea \hfill Feb 2021\\
+\vspace{-7mm}
+\begin{itemize}
+    \setlength\itemsep{-.3em}
+    \item R Programming, Data Wrangling, and Visualization \textit{(graduate)}
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{Undergraduate Mentoring Program} \hfill Jan.2021 - Feb.2021 \\
+Korea University \& Jeju National University, Republic of Korea
+%\itemsep -2pt
+\vspace{-2mm}
+\begin{itemize}
+\setlength\itemsep{-.3em}
+\item Instructed undergraduate students in Jeju national university about how to write a thesis, from setting a research topic to research designing, data collecting, and then actual writing. 
+\end{itemize}
+
+
+\section*{\textsc{Service}}
+
+\vspace{-1mm}
+\textbf{Discussant}, APSA Annual Conference \hfill September 3--5, 2026\\
+American Political Science Association, Boston, MA, USA
+\begin{itemize}
+\vspace{-2mm}
+    \item ``Prejudice, Dehumanization, and Intergroup Hostility''
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{Discussant}, ISA Annual Convention \hfill March 22--25, 2026\\
+International Studies Association, Columbus, OH, USA
+\begin{itemize}
+\vspace{-2mm}
+    \item ``WC059: Diplomacy and Foreign Policy''
+\end{itemize}
+
+\vspace{-2mm}
+\textbf{MEAD Workshop Coordinator}, Models, Experiments, and Data Workshop \hfill Fall 2023 -- Spring 2025\\
+University of Wisconsin-Madison Political Science Department
+
+
+\vspace{2mm}
+\textbf{International Student Panelist}, Prospective Students Visiting Days \hfill 2024 -- 2026\\
+University of Wisconsin-Madison Political Science Department
+
+\vspace{2mm}
+\textbf{Graduate Student Representative}, Diversity and Equity Committee \hfill Fall 2024 -- Spring 2026\\
+University of Wisconsin-Madison Political Science Department
+
+\vspace{1mm}
+\textbf{Student Leader}, Political Science Graduate Student Professional Development Workshops (PSGW) \hfill Fall 2024 -- Spring 2025\\
+University of Wisconsin-Madison Political Science Department
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+%%%%%%%%%%%% Add these parts if needed %%%%%%%%%
+
+% \vspace{-5mm}
+% \section*{\textsc{Skills}}
+% {\bf Software} {R, STATA, Python,  \LaTeX{} }  \itemsep -2pt
+% \\
+% {\bf Language} Korean(native), English(fluent)
+% \itemsep -2pt
+
+
+% \vspace{-2mm}
+% \section*{\textsc{Additional Experience}}
+% \textbf{Assistant Secretary of 2021 Winter Academic Conference}
+% \hfill Jun.2021 - Jul.2021\\
+% Korea Association of International Development and Cooperation, Seoul, Republic of Korea \\
+
+% \vspace{-2mm}
+% \textbf{International Environment Expert Program}
+% \hfill Jun.2019 - Jul.2019\\
+% Korean Ministry of Environment, Seoul, Republic of Korea
+% % \itemsep -2pt
+% % \vspace{-1.5mm}
+% % \begin{itemize}
+% % \setlength\itemsep{-.3em}
+% %     \item Attended lectures and designed projects on international development cooperation, sustainable development, and climate institutions
+% % \end{itemize}
+
+% \vspace{2mm}
+
+% \textbf{Global Leaders Program, Undergraduate Field Research Programs}
+% \hfill Aug.2017, Jan.2018\\
+% Korea University, Seoul, Republic of Korea
+
+
+
+% \vspace{-3mm}
+% \section*{\textsc{Relevant Coursework}}
+% {\bf Methodology}
+% \vspace{-2mm}
+% \begin{itemize}
+% \setlength\itemsep{-.5em}
+%     \item Seminar, Advanced Methodology: Machine Learning (PS919), Maximum Likelihood Estimation (PS818), Mathematical Statistics (STAT609), Introduction to Statistics in Political Science (PS812), Multi-variable Statistical Inference for Political Research (PS813), Empirical Methods of Political Inquiry (PS817), Research Methods in International Relations, Causal Inference in International Relations
+%     \item Mathematical Statistics (STAT609)
+
+% \end{itemize}
+
+% %\vspace{-1mm}
+% %{\bf International Relations} 
+% {\bf Substantive}\itemsep -1pt
+% \vspace{-2mm}
+% \begin{itemize}
+% \setlength\itemsep{-.5em}
+%     \item  International Political Economy, Theories of International Relations, Global Environmental Politics
+% %\end{itemize}
+
+% %\vspace{-1mm}
+% %{\bf Public opinion and Psychology} \itemsep -1pt
+% %\vspace{-2mm}
+% %\begin{itemize}
+% \setlength\itemsep{-.5em}
+%     \item Democratic Imperfections, Korean Electoral Politics in Comparative Perspective, Comparative political behavior
+%     \item Psychological Approaches to International Relations, Episodic Memory: Learning and Behavior, Introduction to Moral Psychology
+% \end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+% \itemsep -2pt
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{-.3em}
+%     \item Conducted field research and attended lectures about local political problems in Singapore and Indonesia 
+%     \item Won the Best project awards (USD 2,400)
+% \end{itemize}
+
+% \vspace{-3mm}
+% \section*{\textsc{Experiences}}
+% {\bf Head Administrative Assistant, Korea University} \hfill {Sep.2019 - Jun.2020} \itemsep -2pt
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+%     \item  Managed the workshops, seminars, and orientations in the Political Science department 
+% \end{itemize}
+
+% \vspace{2mm}
+% {\bf Volunteer Reporter in NGO (G-Foundations), Seoul, Republic of Korea} \hfill {Mar.2019 - Jul.2019} \itemsep-2pt
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+%     \item  Translated news reports and created slide news about political, environmental issues in Africa
+% \end{itemize}
+
+% \vspace{2mm}
+% {\bf Independent Magazine Publication, \textquotedblleft Don't ask, don't bury\textquotedblright} \hfill {Nov.2018 - Mar.2019}
+% \itemsep -2pt
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+%     \item  Wrote, designed, and published an independent magazine addressing young generations' struggles, by raising fund via an online crowd funding site, \textit{Tumblbug}
+% \end{itemize}
+% \vspace{2mm}
+% %\textit{\textquotedblleft Don't ask, don't bury: Korean young generations\textquotedblright}, Online crowd funding platform
+
+% {\bf Student Council in Political Science Department, Korea University} \hfill {Dec.2015 - Dec.2016}\\
+% Representative of the class of 2019, Secretary of the \textit{Students Living and Culture Division}
+% \itemsep -2pt
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{-.3em}
+%     \item  Hosted and promoted school events that foreign and minority students can join together
+% \end{itemize}
+% %, and promoted overall school events on Social Media page with more than 700 followers
+
+% \vspace{1.5mm}
+% {\bf University Student Press (The HOANS), Korea University} \hfill {May.2015 - Nov.2016}
+% \itemsep -2pt
+% \vspace{-1.5mm}
+% \begin{itemize}
+% \setlength\itemsep{-.3em}
+%     \item  Wrote more than 3 articles every month, about social, political, and school news
+% \end{itemize}
+
